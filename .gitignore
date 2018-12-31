@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/RandomlyWeightedEnsemble/saved_models/keras_cifar10_trained_model.h5
+/RandomlyWeightedEnsemble/cifar-data.tar.gz

@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>RandomlyWeightedEnsemble</Name>
     <RootNamespace>RandomlyWeightedEnsemble</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|Tensorflow</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,41 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="carlini_detection\baseline_attack.py" />
+    <Compile Include="carlini_detection\density_estimation.py" />
+    <Compile Include="carlini_detection\dimensionality_reduction.py" />
+    <Compile Include="carlini_detection\dropout_detect.py" />
+    <Compile Include="carlini_detection\fast_gradient_sign.py" />
+    <Compile Include="carlini_detection\kernel_two_sample_test.py" />
+    <Compile Include="carlini_detection\maximum_mean_discrepancy.py" />
+    <Compile Include="carlini_detection\mean_filter.py" />
+    <Compile Include="carlini_detection\nn_layer_detect.py" />
+    <Compile Include="carlini_detection\outlier_class_training.py" />
+    <Compile Include="carlini_detection\pca_detection.py" />
+    <Compile Include="carlini_detection\resnet.py" />
+    <Compile Include="carlini_detection\setup_cifar.py" />
+    <Compile Include="carlini_detection\setup_mnist.py" />
+    <Compile Include="carlini_detection\train.py" />
+    <Compile Include="carlini_detection\utils.py" />
+    <Compile Include="carlini_detection\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="detectors.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RandomlyWeightedEnsemble.py" />
+    <Compile Include="utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="carlini_detection\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|Tensorflow" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

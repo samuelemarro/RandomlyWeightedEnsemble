@@ -1,0 +1,2 @@
+# RandomlyWeightedEnsemble
+RandomlyWeightedEnsemble breaks the transferability of adversarial attacks by randomly combining the predictions of multiple defended model. To do so, we first create several clones of the model, each with its own defense (e.g. Adversarial training or Depth reduction). We then gather the predictions of each model and compute the weighted average, assigning a randomly generated weight to each model.

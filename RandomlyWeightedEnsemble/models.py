@@ -26,6 +26,3 @@ def cifar10_cnn(input_shape, num_classes):
     model.add(Dense(num_classes))
     model.add(Activation('softmax'))
     return model
-
-def cifar10_tf(x):
-
